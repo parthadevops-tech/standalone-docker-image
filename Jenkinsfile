@@ -65,7 +65,7 @@ pipeline {
                     sh "docker rm $CONTAINER_NAME || true"
 
                     // Run the Docker container
-                    sh "docker run -d --name $CONTAINER_NAME -p 8081:80 $IMAGE_NAME"
+                    sh "docker run -d --name $CONTAINER_NAME -p 8082:80 $IMAGE_NAME"
                     // Check if the build directory exists
                     //f (fileExists(env.BUILD_DIR)) {
                         //echo "Build directory found, deploying to Apache server..."
