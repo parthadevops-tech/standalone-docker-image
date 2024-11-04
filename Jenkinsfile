@@ -40,7 +40,9 @@ pipeline {
                 // Create a Dockerfile for the build
                 writeFile file: 'Dockerfile', text: '''
                 FROM httpd:2.4
-                COPY /var/lib/jenkins/workspace/angularapp-jenkins/dist/standalone-component15/browser/ /var/www/html/standalone-app/
+                sudo chown -R jenkins:jenkins /var/lib/jenkins/workspace/angularapp-jenkins/dist
+                sudo chmod -R 755 /var/lib/jenkins/workspace/angularapp-jenkins/dist
+                COPY ./var/lib/jenkins/workspace/angularapp-jenkins/dist/standalone-component15/browser/ /var/www/html/standalone-app/
                 EXPOSE 80
                 '''
                 
