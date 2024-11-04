@@ -40,7 +40,7 @@ pipeline {
                 // Create a Dockerfile for the build
                 writeFile file: 'Dockerfile', text: '''
                 FROM httpd:2.4
-                COPY ./var/lib/jenkins/workspace/angularapp-jenkins/dist/standalone-component15/browser/ /var/www/html/standalone-app/
+                COPY /var/lib/jenkins/workspace/angularapp-jenkins/dist/standalone-component15/browser/ /var/www/html/standalone-app/
                 EXPOSE 80
                 '''
                 
