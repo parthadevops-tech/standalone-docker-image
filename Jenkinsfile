@@ -52,20 +52,20 @@ pipeline {
         stage('Deploy to Apache') {
             steps {
                 script {
-                  def containerExists = sh(script: "docker ps -a -q -f name=${IMAGE_NAME}", returnStatus: true) == 0
-                  if (containerExists) {
-                      sh "docker stop ${IMAGE_NAME}"
-                      sh "docker rm ${IMAGE_NAME}"
-                  }
+                  // def containerExists = sh(script: "docker ps -a -q -f name=${IMAGE_NAME}", returnStatus: true) == 0
+                  // if (containerExists) {
+                  //     sh "docker stop ${IMAGE_NAME}"
+                  //     sh "docker rm ${IMAGE_NAME}"
+                  // }
 
                     // Run a new container with the built Docker image on port 8081 (or any other available port)
-                    sh "docker run -d --name ${IMAGE_NAME} -p 8081:80 ${IMAGE_NAME}"
+                    //sh "docker run -d --name ${IMAGE_NAME} -p 8081:80 ${IMAGE_NAME}"
                     // Stop and remove any existing container
-                    //sh "docker stop $CONTAINER_NAME || true"
-                    //sh "docker rm $CONTAINER_NAME || true"
+                    sh "docker stop $CONTAINER_NAME || true"
+                    sh "docker rm $CONTAINER_NAME || true"
 
                     // Run the Docker container
-                    //sh "docker run -d --name $CONTAINER_NAME -p 8081:80 $IMAGE_NAME"
+                    sh "docker run -d --name $CONTAINER_NAME -p 8081:80 $IMAGE_NAME"
                     // Check if the build directory exists
                     //f (fileExists(env.BUILD_DIR)) {
                         //echo "Build directory found, deploying to Apache server..."
