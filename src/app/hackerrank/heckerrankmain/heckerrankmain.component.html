@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <app-dataform (AddedItem)="addedItems($event)"></app-dataform>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-3">
+          <input
+            type="number"
+            class="form-control"
+            id="numberinput1"
+            placeholder="Kilometre"
+            [(ngModel)]="numberinput1"
+            (change)="numberinput1Change($event)"
+          />
+        </div>
+        <div class="col-md-3">
+          <input
+            type="number"
+            class="form-control"
+            id="numberinput2"
+            placeholder="Metre"
+            [(ngModel)]="numberinput2"
+            (change)="numberinput2Change($event)"
+          />
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-3">
+          <select
+            class="form-select"
+            [(ngModel)]="selectedKm"
+            (change)="firstdropdwnChange($event)"
+          >
+            <option
+              *ngFor="let units of lengthOp; let i = index"
+              [value]="units.id"
+            >
+              {{ units.label }}
+            </option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select class="form-select" [(ngModel)]="selectedM">
+            <option
+              *ngFor="let units of lengthOp; let i = index"
+              [value]="units.id"
+            >
+              {{ units.label }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <h6>Book Details</h6>
+      <app-datalist
+        [dataList]="dataListBookItems"
+        [dataType]="Book"
+        (itemIndex)="deleteBookItem($event)"
+      ></app-datalist>
+    </div>
+    <div class="col-md-6">
+      <h6>Song Details</h6>
+      <app-datalist
+        [dataList]="dataListSongsItems"
+        [dataType]="Song"
+        (itemIndex)="deleteSongItem($event)"
+      ></app-datalist>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+.main{
+    background: url('../../../assets/images/Twimbit_Global_Vendors_Q3_Performance.jpg');
+    height: 450px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.navbar-brand{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-style:normal;
+  font-weight:900;
+  font-display: swap;
+  color: #fff;
+}
+
+.nav-link{
+  font-family: 'Roboto', sans-serif;
+//   font-size: 30px;
+  font-style:normal;
+  color: #fff; 
+}
+.nav-link.active{
+    color: #e39309;
+}
+.customclass{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.customBtn{
+    background-color: #D44800;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+}
+.crow{
+  //  height: 70vh;
+}
+.navbar-toggler{
+    background-color: #fff;
+}
+.lsection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+.rsection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.lsection h1{
+  font-family: 'Roboto', sans-serif;
+  font-style:normal;
+  font-size: 37px;
+  font-weight:900;
+  text-transform: uppercase;
+  font-display: swap;
+  color: #fff;
+}
+.fbutton{
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  padding: 7px 22px;
+  text-align: center;
+  color: #fff;
+}
+.sbutton{
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  padding: 7px 22px;
+  margin-left: 3px;
+  text-align: center;
+  color: #D44800;
+}
+
+.box{
+  width: 70%;
+  margin: 10px auto;
+  border-left: 26px solid #EE9617;
+  box-shadow: 0px 0px 10px #dfdede;
+}
+.querysection{
+  padding: 20px 20px 20px 30px;
+}
+.querysection h2{
+  font-size: 22px;
+}
+.red{
+  color: #FE5858;
+}
+.querysection .hrow{
+  width: 40%;
+  height: 2px;
+  background: #dfdede;
+  margin: 10px auto;
+}
+
+.actionwrapper{
+  background-image: linear-gradient(to right, #EE9617, #FE5858);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  border:1px dashed #333
+}
+.thirdsection{
+  text-align: center;
+}
+.picwrapper{
+  background: #C7C6C4;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.picwrapper img{
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 78px
+}
+.card-title{
+
+}
+
+.stars i{
+  color:#EE9617 ;
+}
+@media (min-width: 1200px) {
+  .lsection h1{
+    font-family: 'Roboto', sans-serif;
+    font-style:normal;
+    font-size: 41px;
+    font-weight:900;
+    text-transform: uppercase;
+    font-display: swap;
+    color: #fff;
+  }
+}
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 1199.98px) {
+  .responsive-font-example {
+    font-size: 30px;
+  }
+}

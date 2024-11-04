@@ -1,0 +1,106 @@
+<div class="container">
+  <div class="row" *ngFor="let row of rows; let rowIndex = index">
+    <div
+      class="item"
+      *ngFor="
+        let col of cols;
+        let colIndex = index;
+        let odd = odd;
+        let even = even
+      "
+      [ngClass]="{
+        red: (rowIndex + colIndex) % 2 === 0,
+        blue: (rowIndex + colIndex) % 2 !== 0
+      }"
+    ></div>
+  </div>
+  <div class="row mt-2">
+    <button type="button" class="btn btn-primary" (click)="openModal(template)">
+      Open modal
+    </button>
+
+    <ng-template #template>
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Modal</h4>
+        <button
+          type="button"
+          class="close pull-right"
+          aria-label="Close"
+          (click)="modalRef.hide()"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        This is a sample modal dialog box.
+        <div class="row">
+          <div class="mb-3">
+            <label for="firstnameInput1" class="form-label">First Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstnameInput1"
+              placeholder="First name..."
+              [(ngModel)]="firstname"
+              (change)="changeFirstName($event)"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="lastnameInput1" class="form-label">Last Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastnameInput1"
+              placeholder="Last name..."
+              [(ngModel)]="lastname"
+              (change)="changeLasttName($event)"
+            />
+          </div>
+          <div class="mb-3">
+            <select
+              [(ngModel)]="selectedPosition"
+              class="form-select form-select-md mb-3"
+              aria-label=".form-select-md example"
+              (change)="posChange($event)"
+            >
+              <option value="default" disabled>--Select--</option>
+              <option
+                *ngFor="let position of officialPosition"
+                [value]="position.empPos"
+              >
+                {{ position.empPos }}
+              </option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked"
+                [(ngModel)]="checkboxValue"
+                (change)="onCheckboxChange($event)"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                checkbox
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="modalRef.hide()">
+          Close
+        </button>
+      </div>
+    </ng-template>
+  </div>
+</div>
+<br />
+<span [innerHTML]="safeValue"></span>
+<br />
+<h1 appGoWild>Hello World!</h1>
+<br />
+<br />
+<span>current Date: {{ currentdate.toDateString() | transformPipe }}</span>

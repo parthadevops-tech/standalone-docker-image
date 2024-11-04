@@ -1,0 +1,141 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3>Add User</h3>
+    <hr />
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          formControlName="name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="Username" class="form-label">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Username"
+          formControlName="username"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="Email"
+          formControlName="email"
+        />
+      </div>
+      <div formGroupName="address">
+        <div class="mb-3">
+          <label for="Street" class="form-label">Street</label>
+          <input
+            type="text"
+            class="form-control"
+            id="street"
+            formControlName="street"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="Suite" class="form-label">Suite</label>
+          <input
+            type="text"
+            class="form-control"
+            id="suite"
+            formControlName="suite"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="city" class="form-label">City</label>
+          <input
+            type="text"
+            class="form-control"
+            id="city"
+            formControlName="city"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="zipcd" class="form-label">Zipcode</label>
+          <input
+            type="text"
+            class="form-control"
+            id="zipcd"
+            formControlName="zipcode"
+          />
+        </div>
+        <div formGroupName="geo">
+          <div class="mb-3">
+            <label for="Latitude" class="form-label">Latitude</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Latitude"
+              formControlName="lat"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="Longitude" class="form-label">Longitude</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Longitude"
+              formControlName="lng"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="Phone" class="form-label">Phone</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Phone"
+          formControlName="phone"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="Website" class="form-label">Website</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Website"
+          formControlName="website"
+        />
+      </div>
+      <div formGroupName="company">
+        <div class="mb-3">
+          <label for="CompanyName" class="form-label">Company Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="CompanyName"
+            formControlName="name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="CatchPhrase" class="form-label">Catch Phrase</label>
+          <input
+            type="text"
+            class="form-control"
+            id="CatchPhrase"
+            formControlName="catchPhrase"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="Business" class="form-label">Business</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Business"
+            formControlName="bs"
+          />
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

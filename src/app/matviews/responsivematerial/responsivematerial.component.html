@@ -1,0 +1,163 @@
+<div class="container">
+  <h1 class="text-center">Angular Material Responsive Template</h1>
+  <div class="flex-container">
+    <div class="flex-item">
+      <mat-card appearance="outlined">
+        <mat-card-content>
+          <h2>Section 1</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="flex-item">
+      <mat-card appearance="outlined">
+        <mat-card-content>
+          <h2>Section 2</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="flex-item">
+      <mat-card appearance="outlined">
+        <mat-card-content>
+          <h2>Section 2</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="flex-container" style="margin: 10px">
+    <mat-form-field class="search-form" style="width: 90%" appearance="outline">
+      <input matInput placeholder="Search Picture" type="text" />
+    </mat-form-field>
+    <button button="submit" mat-raised-button color="primary">Search</button>
+  </div>
+</div>
+<div class="container">
+  <div class="flex-container">
+    <div class="flex-item">
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz
+            breeds of dog from Japan. A small, agile dog that copes very well
+            with mountainous terrain, the Shiba Inu was originally bred for
+            hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="flex-item">
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz
+            breeds of dog from Japan. A small, agile dog that copes very well
+            with mountainous terrain, the Shiba Inu was originally bred for
+            hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="flex-item">
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+          alt="Photo of a Shiba Inu"
+        />
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz
+            breeds of dog from Japan. A small, agile dog that copes very well
+            with mountainous terrain, the Shiba Inu was originally bred for
+            hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="flex-container">
+    <div class="flex-item">
+      <mat-card appearance="outlined">
+        <mat-form-field appearance="outline">
+          <input type="email" matInput placeholder="Ex. pat@example.com" />
+        </mat-form-field>
+        <button button="submit" mat-raised-button color="primary">
+          Search
+        </button>
+      </mat-card>
+    </div>
+    <div class="flex-item">
+      <mat-card appearance="outlined">
+        <mat-form-field appearance="outline">
+          <mat-label>Cars</mat-label>
+          <select matNativeControl required>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+          </select>
+        </mat-form-field>
+        <button button="submit" mat-raised-button color="primary">
+          Search
+        </button>
+      </mat-card>
+    </div>
+    <div class="flex-item">
+      <mat-card appearance="outlined">
+        <mat-form-field appearance="outline">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker" />
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </mat-card>
+    </div>
+  </div>
+</div>

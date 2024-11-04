@@ -1,0 +1,33 @@
+<div class="buttons-container">
+    <button class="show-btn" (click)="showDynamicComponent()">Show component</button>
+    <button class="remove-btn" (click)="removeDynamicComponent()">
+      Remove component
+    </button>
+    <button class="remove-btn" (click)="getXSSValue()">
+      Get XSS Html value
+    </button>
+  </div>
+  <ng-template #dynamic></ng-template>
+  <div  [innerHTML]="safeValue">
+
+  </div>
+  <br/>
+  <br/>
+<h4>An untrusted URL:</h4>
+<p><a class="e2e-dangerous-url" [href]="dangerousUrl">Click me</a></p>
+<h4>A trusted URL:</h4>
+<p><a class="e2e-trusted-url" [href]="trustedUrl">Click me</a></p>
+<br/>
+<br/>
+<h4>Resource URL:</h4>
+<p>Showing: {{dangerousVideoUrl}}</p>
+<p>Trusted:</p>
+<!-- <iframe class="e2e-iframe-trusted-src" width="640" height="390" [src]="videoUrl"></iframe> -->
+<!-- <youtube-player [videoId]="videoId"> </youtube-player> -->
+<youtube-player videoId="3IXwN4XJywQ"></youtube-player>
+<br/>
+<br/>
+<iframe  width="640" height="390" [src]="videoUrl">
+</iframe>
+<!-- <p>Untrusted:</p>
+<iframe class="e2e-iframe-untrusted-src" width="640" height="390" [src]="dangerousVideoUrl"></iframe> -->

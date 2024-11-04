@@ -1,0 +1,26 @@
+<table class="table .table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Genre</th>
+      <th scope="col">Creator</th>
+      <th scope="col">Total Time</th>
+      <th scope="col">Type</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of dataList; let i = index">
+      <td>{{ data.name }}</td>
+      <td>{{ data.genre }}</td>
+      <td>{{ data.creator }}</td>
+      <td>{{ data.totalTime }}</td>
+      <td>{{ data.type }}</td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="deleteItem(i)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
