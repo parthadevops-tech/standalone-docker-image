@@ -40,7 +40,7 @@ pipeline {
                 // Create a Dockerfile for the build
                 writeFile file: 'Dockerfile', text: '''
                 FROM httpd:2.4
-                COPY ${BUILD_DIR} /var/www/html/standalone-app/
+                COPY ${BUILD_DIR} /usr/local/apache2/htdocs/standalone-app/
                 RUN chown -R www-data:www-data /var/www/html/standalone-app/ && \
                 chmod -R 755 /var/www/html/standalone-app/
                 EXPOSE 80
