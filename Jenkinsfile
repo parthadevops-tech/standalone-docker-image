@@ -45,7 +45,7 @@ pipeline {
                 chmod -R 755 /usr/local/apache2/htdocs/standalone-app/
                 RUN ls -la /usr/local/apache2/htdocs/standalone-app/
                 RUN rm -f index.html
-                RUN mv standalone-app/* . 
+                RUN mv /usr/local/apache2/htdocs/standalone-app/* /usr/local/apache2/htdocs/ 
                 RUN apache2ctl restart
                 EXPOSE 80
                 '''
