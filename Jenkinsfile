@@ -44,9 +44,9 @@ pipeline {
                 RUN chown -R www-data:www-data /usr/local/apache2/htdocs/standalone-app/ && \
                 chmod -R 755 /usr/local/apache2/htdocs/standalone-app/
                 RUN ls -la /usr/local/apache2/htdocs/standalone-app/
-                RUN rm -rf /usr/local/apache2/htdocs/index.html
-                RUN mv /usr/local/apache2/htdocs/standalone-app/* /usr/local/apache2/htdocs/ 
-                RUN service apache2 restart
+                rm -f index.html
+                mv standalone-app/* . 
+                apache2ctl restart
                 EXPOSE 80
                 '''
                 
