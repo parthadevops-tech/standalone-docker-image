@@ -46,6 +46,7 @@ pipeline {
                 RUN ls -la /usr/local/apache2/htdocs/standalone-app/
                 RUN rm -rf /usr/local/apache2/htdocs/index.html
                 RUN mv /usr/local/apache2/htdocs/standalone-app/* /usr/local/apache2/htdocs/ 
+                RUN service apache2 restart
                 EXPOSE 80
                 '''
                 
