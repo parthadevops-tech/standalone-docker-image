@@ -6,7 +6,7 @@ pipeline {
     // }
     
     environment {
-        BUILD_DIR = "/var/lib/jenkins/workspace/angularapp-jenkins/dist/standalone-component15/browser"
+        BUILD_DIR = "dist/standalone-component15/browser"
         APACHE_DEPLOY_DIR = "/var/www/html/standalone-app"
         IMAGE_NAME = "angularapp-jenkins"
         CONTAINER_NAME = "angularapp_container"
@@ -39,8 +39,8 @@ pipeline {
             steps {
                 // Create a Dockerfile for the build
                 writeFile file: 'Dockerfile', text: '''
-                FROM httpd:2.4
-                COPY ${BUILD_DIR} /usr/local/apache2/htdocs/standalone-app/
+                FROM httpd:2.4 AS builder
+                COPY --from = builder ${BUILD_DIR} /usr/local/apache2/htdocs/standalone-app/
                 RUN chown -R www-data:www-data /usr/local/apache2/htdocs/standalone-app/ && \
                 chmod -R 755 /usr/local/apache2/htdocs/standalone-app/
                 EXPOSE 80
